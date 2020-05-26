@@ -7,7 +7,7 @@ using UnityEngine.Scripting.APIUpdating;
 public class Attacker : MonoBehaviour
 {
     [Header("Movement")]
-    [SerializeField][Range(0f, 5f)] float moveSpeed = 1f;
+    [SerializeField][Range(0f, 5f)] float currentSpeed = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +23,11 @@ public class Attacker : MonoBehaviour
 
     private void Move()
     {
-        gameObject.transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
+        gameObject.transform.Translate(Vector2.left * currentSpeed * Time.deltaTime);
+    }
+
+    public void SetCurrentSpeed(float speedToSet)
+    {
+        currentSpeed = speedToSet;
     }
 }
