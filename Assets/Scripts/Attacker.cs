@@ -30,4 +30,5 @@ public class Attacker : MonoBehaviour
     {
         currentSpeed = speedToSet;
     }
+
 }
