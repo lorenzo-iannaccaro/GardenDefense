@@ -21,11 +21,18 @@ public class DefenderSpawner : MonoBehaviour
     private void OnMouseDown()
     {
         Debug.Log("Mouse downclick on area");
-        SpawnDefender();
+        SpawnDefender(GetPositionClicked());
     }
 
-    private void SpawnDefender()
+    private void SpawnDefender(Vector2 coordinates)
     {
-        var defenderObj = Instantiate(defenderPrefab, transform.position, transform.rotation);
+        var defenderObj = Instantiate(defenderPrefab, coordinates, transform.rotation);
+    }
+
+    private Vector2 GetPositionClicked()
+    {
+        Vector2 clickPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        Vector2 worldPosition = Camera.main.ScreenToWorldPoint(clickPosition);
+        return worldPosition;
     }
 }
