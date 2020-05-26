@@ -444,6 +444,12 @@ Transform:
   m_Father: {fileID: 2010999459}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1719344056 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1719344056, guid: 32a5b50d2a2a9634f83a833510ed0bfd,
+    type: 3}
+  m_PrefabInstance: {fileID: 8439268763222365214}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1955957524
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,6 +801,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1673734721, guid: 32a5b50d2a2a9634f83a833510ed0bfd, type: 3}
+      propertyPath: gunPrefab
+      value: 
+      objectReference: {fileID: 1719344056}
     - target: {fileID: 8439268764769877596, guid: 32a5b50d2a2a9634f83a833510ed0bfd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -864,6 +874,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9182842237325523626, guid: 63deb69dbfc2bd7499ad6771cd25eeae,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182842237325523626, guid: 63deb69dbfc2bd7499ad6771cd25eeae,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182842237325523626, guid: 63deb69dbfc2bd7499ad6771cd25eeae,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9182842237337757524, guid: 63deb69dbfc2bd7499ad6771cd25eeae,
         type: 3}
       propertyPath: m_LocalPosition.x
