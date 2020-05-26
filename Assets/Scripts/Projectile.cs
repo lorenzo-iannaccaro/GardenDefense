@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour
 {
     [SerializeField] float projectileSpeed = 10f;
     [SerializeField] float projectileRotationSpeed = 90f;
+    [SerializeField] float projectileDamage = 60f;
     //Vector3 actualRotation = new Vector3(0,0,0);
 
     // Start is called before the first frame update
@@ -29,5 +30,13 @@ public class Projectile : MonoBehaviour
         //                        Vector3.forward,
         //                        projectileRotationSpeed * Time.deltaTime);
         transform.Translate(Vector2.right * projectileSpeed * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Health otherHealth = other.GetComponent<Health>();
+        if (!otherHealth) return;
+        otherHealth.DealDamage(projectileDamage);
+        Destroy(gameObject);
     }
 }
