@@ -21,7 +21,9 @@ public class DefenderSpawner : MonoBehaviour
     private void OnMouseDown()
     {
         Debug.Log("Mouse downclick on area");
-        SpawnDefender(GetPositionClicked());
+        Vector2 worldPosition = GetPositionFromClickedPoint();
+        Vector2 roundedPosition = GetGridPosition(worldPosition);
+        SpawnDefender(roundedPosition);
     }
 
     private void SpawnDefender(Vector2 coordinates)
@@ -29,7 +31,14 @@ public class DefenderSpawner : MonoBehaviour
         var defenderObj = Instantiate(defenderPrefab, coordinates, transform.rotation);
     }
 
-    private Vector2 GetPositionClicked()
+    private Vector2 GetGridPosition(Vector2 worldPos)
+    {
+        int gridX = Mathf.RoundToInt(worldPos.x);
+        int gridY = Mathf.RoundToInt(worldPos.y);
+        return new Vector2(gridX, gridY);
+    }
+
+    private Vector2 GetPositionFromClickedPoint()
     {
         Vector2 clickPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
         Vector2 worldPosition = Camera.main.ScreenToWorldPoint(clickPosition);
