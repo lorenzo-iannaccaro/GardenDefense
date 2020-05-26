@@ -148,4 +148,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 4801155968034889783, guid: ff882c9d70ef8ba4b83d418bb972d000,
     type: 3}
-  gunPrefab: {fileID: 0}
+  gunPrefab: {fileID: 1719344056}
