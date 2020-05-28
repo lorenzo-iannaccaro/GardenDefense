@@ -729,7 +729,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1925340558264653469}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1575692692
+--- !u!114 &1575692695
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -741,6 +741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 173eb1a6c0ca2084391e9d3549b542e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  money: 100
 --- !u!1 &1701080106
 GameObject:
   m_ObjectHideFlags: 0
@@ -1188,11 +1189,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4753754228707895784, guid: acf9c992e6e5dd1429c84b29eb493844,
-        type: 3}
-      propertyPath: currentSpeed
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4753754228707895788, guid: acf9c992e6e5dd1429c84b29eb493844,
         type: 3}
       propertyPath: m_Name
