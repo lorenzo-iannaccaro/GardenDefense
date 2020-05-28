@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 330573644}
   - component: {fileID: 330573645}
   m_Layer: 0
-  m_Name: Cactus
+  m_Name: CactusButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -386,6 +386,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2af5c3b8dec5574f97e158da0a14cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defenderPrefab: {fileID: 4975549823316414892, guid: 32a5b50d2a2a9634f83a833510ed0bfd,
+    type: 3}
 --- !u!1 &500964249
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,8 +539,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ae5a83ff1f2a74f974c075aa93c773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defenderPrefab: {fileID: 8439268764769877598, guid: 32a5b50d2a2a9634f83a833510ed0bfd,
-    type: 3}
 --- !u!61 &1189370381
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -865,7 +865,7 @@ GameObject:
   - component: {fileID: 2049784145}
   - component: {fileID: 2049784146}
   m_Layer: 0
-  m_Name: trophy
+  m_Name: TrophyButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -973,6 +973,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2af5c3b8dec5574f97e158da0a14cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defenderPrefab: {fileID: -6094636824050734407, guid: 63deb69dbfc2bd7499ad6771cd25eeae,
+    type: 3}
 --- !u!1001 &1097435064109523904
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1326,21 +1328,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 9182842237325523626, guid: 63deb69dbfc2bd7499ad6771cd25eeae,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9182842237325523626, guid: 63deb69dbfc2bd7499ad6771cd25eeae,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9182842237325523626, guid: 63deb69dbfc2bd7499ad6771cd25eeae,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9182842237337757524, guid: 63deb69dbfc2bd7499ad6771cd25eeae,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1400,6 +1387,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Trophy
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182842238344241406, guid: 63deb69dbfc2bd7499ad6771cd25eeae,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.38
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63deb69dbfc2bd7499ad6771cd25eeae, type: 3}

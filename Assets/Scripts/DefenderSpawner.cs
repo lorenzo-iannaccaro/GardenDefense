@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class DefenderSpawner : MonoBehaviour
 {
-    [SerializeField] GameObject defenderPrefab;
+    Defender defenderPrefab;
+
+    public void SetSelectedDefender(Defender selectedDefender)
+    {
+        defenderPrefab = selectedDefender;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +33,7 @@ public class DefenderSpawner : MonoBehaviour
 
     private void SpawnDefender(Vector2 coordinates)
     {
-        var defenderObj = Instantiate(defenderPrefab, coordinates, transform.rotation);
+        Defender defenderObj = Instantiate(defenderPrefab, coordinates, transform.rotation); 
     }
 
     private Vector2 GetGridPosition(Vector2 worldPos)
