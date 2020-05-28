@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Defender : MonoBehaviour
 {
-    [SerializeField] int pointCost = 100;
+    [SerializeField] int moneyCost = 100;
 
     // Start is called before the first frame update
     void Start()
@@ -22,5 +22,10 @@ public class Defender : MonoBehaviour
     {
         var moneyDisplay = FindObjectOfType<MoneyDisplay>();
         moneyDisplay.AddMoney(amount);
+    }
+
+    public int GetMoneyCost()
+    {
+        return moneyCost;
     }
 }

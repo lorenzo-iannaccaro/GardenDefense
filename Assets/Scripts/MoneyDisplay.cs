@@ -44,4 +44,9 @@ public class MoneyDisplay : MonoBehaviour
             UpdateDisplay();
         }
     }
+
+    public int GetActualMoney()
+    {
+        return money;
+    }
 }

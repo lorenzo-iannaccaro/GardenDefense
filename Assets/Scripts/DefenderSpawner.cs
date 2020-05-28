@@ -28,7 +28,17 @@ public class DefenderSpawner : MonoBehaviour
         Debug.Log("Mouse downclick on area");
         Vector2 worldPosition = GetPositionFromClickedPoint();
         Vector2 roundedPosition = GetGridPosition(worldPosition);
-        SpawnDefender(roundedPosition);
+        SpawnIfAffordable(roundedPosition);
+
+    }
+
+    private void SpawnIfAffordable(Vector2 roundedPosition)
+    {
+        if (defenderPrefab.GetMoneyCost() <= FindObjectOfType<MoneyDisplay>().GetActualMoney())
+        {
+            SpawnDefender(roundedPosition);
+            FindObjectOfType<MoneyDisplay>().SpendMoney(defenderPrefab.GetMoneyCost());
+        }
     }
 
     private void SpawnDefender(Vector2 coordinates)

@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82bebddd77505944d91f1602def2a5fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointCost: 100
+  moneyCost: 20
 --- !u!1 &9182842238344241407
 GameObject:
   m_ObjectHideFlags: 0
