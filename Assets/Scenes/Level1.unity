@@ -1387,10 +1387,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trophy
       objectReference: {fileID: 0}
-    - target: {fileID: 9182842238344241406, guid: 63deb69dbfc2bd7499ad6771cd25eeae,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.38
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63deb69dbfc2bd7499ad6771cd25eeae, type: 3}

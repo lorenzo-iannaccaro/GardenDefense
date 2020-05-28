@@ -17,4 +17,10 @@ public class Defender : MonoBehaviour
     {
         
     }
+
+    public void AddMoney(int amount)
+    {
+        var moneyDisplay = FindObjectOfType<MoneyDisplay>();
+        moneyDisplay.AddMoney(amount);
+    }
 }
