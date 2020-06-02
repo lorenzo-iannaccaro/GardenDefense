@@ -6,8 +6,8 @@ using UnityEngine;
 public class AttackerSpawner : MonoBehaviour
 {
     bool spawn = true;
-    [SerializeField] float randomMin = 1;
-    [SerializeField] float randomMax = 5;
+    [SerializeField] float randomMinSpawnTime = 1;
+    [SerializeField] float randomMaxSpawnTime = 5;
     [SerializeField] Attacker attackerPrefab;
 
     // Start is called before the first frame update
@@ -15,7 +15,7 @@ public class AttackerSpawner : MonoBehaviour
     {
         while (spawn)
         {
-            yield return new WaitForSeconds(UnityEngine.Random.Range(randomMin, randomMax));
+            yield return new WaitForSeconds(UnityEngine.Random.Range(randomMinSpawnTime, randomMaxSpawnTime));
             SpawnAttacker();
         }
     }
