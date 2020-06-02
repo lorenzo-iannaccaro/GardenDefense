@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Lizard : MonoBehaviour
 {
-    [SerializeField] float attackDamage = 50f;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +20,7 @@ public class Lizard : MonoBehaviour
     {
         if (otherCollider.GetComponent<Defender>())
         {
-            this.GetComponent<Attacker>().Attack(otherCollider.GetComponent<Defender>(), attackDamage);
+            this.GetComponent<Attacker>().Attack(otherCollider.GetComponent<Defender>());
         }
     }
 }

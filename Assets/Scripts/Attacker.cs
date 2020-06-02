@@ -8,6 +8,7 @@ public class Attacker : MonoBehaviour
 {
     [Header("Movement")]
     [SerializeField][Range(0f, 5f)] float currentSpeed = 0f;
+    Defender currentTarget;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,15 @@ public class Attacker : MonoBehaviour
     void Update()
     {
         Move();
+        UpdateAnimation();
+    }
+
+    private void UpdateAnimation()
+    {
+        if (!currentTarget)
+        {
+            this.GetComponent<Animator>().SetBool("isAttacking", false);
+        }
     }
 
     private void Move()
@@ -31,11 +41,17 @@ public class Attacker : MonoBehaviour
         currentSpeed = speedToSet;
     }
 
-    public void Attack(Defender target, float damage)
+    public void Attack(Defender target)
     {
+        currentTarget = target;
+        if (!currentTarget) return;
         this.GetComponent<Animator>().SetBool("isAttacking", true);
-        target.GetComponent<Health>().DealDamage(damage);
-        //this.GetComponent<Animator>().SetBool("isAttacking", false);
+    }
+
+    public void DoAttack(float damage)
+    {
+        if (!currentTarget) return;
+        currentTarget.GetComponent<Health>().DealDamage(damage);
     }
 
 }

@@ -171,7 +171,7 @@ PrefabInstance:
     - target: {fileID: 4753754228707895790, guid: acf9c992e6e5dd1429c84b29eb493844,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4753754228707895790, guid: acf9c992e6e5dd1429c84b29eb493844,
         type: 3}
@@ -190,75 +190,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acf9c992e6e5dd1429c84b29eb493844, type: 3}
---- !u!1001 &676161472
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8439268764769877596, guid: 32a5b50d2a2a9634f83a833510ed0bfd,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439268764769877596, guid: 32a5b50d2a2a9634f83a833510ed0bfd,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439268764769877596, guid: 32a5b50d2a2a9634f83a833510ed0bfd,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439268764769877596, guid: 32a5b50d2a2a9634f83a833510ed0bfd,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439268764769877596, guid: 32a5b50d2a2a9634f83a833510ed0bfd,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439268764769877596, guid: 32a5b50d2a2a9634f83a833510ed0bfd,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439268764769877596, guid: 32a5b50d2a2a9634f83a833510ed0bfd,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439268764769877596, guid: 32a5b50d2a2a9634f83a833510ed0bfd,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439268764769877596, guid: 32a5b50d2a2a9634f83a833510ed0bfd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439268764769877596, guid: 32a5b50d2a2a9634f83a833510ed0bfd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439268764769877596, guid: 32a5b50d2a2a9634f83a833510ed0bfd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439268764769877598, guid: 32a5b50d2a2a9634f83a833510ed0bfd,
-        type: 3}
-      propertyPath: m_Name
-      value: Cactus
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 32a5b50d2a2a9634f83a833510ed0bfd, type: 3}
 --- !u!1001 &1151663066
 PrefabInstance:
   m_ObjectHideFlags: 0
