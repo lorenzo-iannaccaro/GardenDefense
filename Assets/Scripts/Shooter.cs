@@ -8,11 +8,13 @@ public class Shooter : MonoBehaviour
     [SerializeField] GameObject projectilePrefab;
     [SerializeField] GameObject gunPrefab;
     private AttackerSpawner alignedAttackerSpawner;
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         SetAttackerSpawner();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -21,10 +23,12 @@ public class Shooter : MonoBehaviour
         if (AttackersInLine())
         {
             // do attack animation
+            animator.SetBool("isAttacking", true);
         }
         else
         {
             // do idle animation
+            animator.SetBool("isAttacking", false);
         }
     }
 
