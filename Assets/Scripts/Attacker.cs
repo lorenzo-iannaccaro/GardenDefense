@@ -31,4 +31,11 @@ public class Attacker : MonoBehaviour
         currentSpeed = speedToSet;
     }
 
+    public void Attack(Defender target, float damage)
+    {
+        this.GetComponent<Animator>().SetBool("isAttacking", true);
+        target.GetComponent<Health>().DealDamage(damage);
+        //this.GetComponent<Animator>().SetBool("isAttacking", false);
+    }
+
 }
