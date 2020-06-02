@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9df46765681b56e419327b005cb6fe26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 8
+  projectileSpeed: 6
   projectileDamage: 100
 --- !u!61 &6696511701452720978
 BoxCollider2D:
@@ -140,7 +140,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.013532281}
