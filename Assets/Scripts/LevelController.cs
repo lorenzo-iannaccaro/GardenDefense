@@ -2,15 +2,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
+    [SerializeField] GameObject winCanvas;
+    [SerializeField] float winPauseTime = 3f;
     int attackersNumber = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        winCanvas.SetActive(false);
     }
 
     // Update is called once per frame
@@ -22,9 +25,16 @@ public class LevelController : MonoBehaviour
             if(attackersNumber == 0)
             {
                 Debug.Log("level win");
-                FindObjectOfType<LevelLoader>().LoadWinScene();
+                StartCoroutine(ProcessWin());
             }
         }
+    }
+
+    IEnumerator ProcessWin()
+    {
+        winCanvas.SetActive(true);
+        yield return new WaitForSeconds(winPauseTime);
+        FindObjectOfType<LevelLoader>().LoadWinScene();
     }
 
     private void StopAttackerSpawners()
