@@ -30,6 +30,16 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene("StartScene");
     }
 
+    public void LoadMainMenuScene()
+    {
+        SceneManager.LoadScene("StartScene");
+    }
+
+    public void LoadOptionsScene()
+    {
+        SceneManager.LoadScene("OptionsScene");
+    }
+
     public void LoadNextScene()
     {
         SceneManager.LoadScene(currentSceneIndex + 1);

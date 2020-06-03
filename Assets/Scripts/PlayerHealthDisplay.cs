@@ -31,11 +31,6 @@ public class PlayerHealthDisplay : MonoBehaviour
         if (lives <= 0) return;
         lives--;
         UpdateDisplay();
-        //if(lives <= 0)
-        //{
-        //    // load start menu scene
-        //    FindObjectOfType<LevelController>().;
-        //}
     }
 
     // Update is called once per frame
