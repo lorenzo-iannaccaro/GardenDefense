@@ -21,16 +21,21 @@ public class PlayerHealthDisplay : MonoBehaviour
         livesText.text = lives.ToString();
     }
 
+    public int GetLives()
+    {
+        return this.lives;
+    }
+
     public void DecreaseLives()
     {
         if (lives <= 0) return;
         lives--;
         UpdateDisplay();
-        if(lives <= 0)
-        {
-            // load start menu scene
-            FindObjectOfType<LevelLoader>().LoadLoseScene();
-        }
+        //if(lives <= 0)
+        //{
+        //    // load start menu scene
+        //    FindObjectOfType<LevelController>().;
+        //}
     }
 
     // Update is called once per frame
