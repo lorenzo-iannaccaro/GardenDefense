@@ -24,14 +24,24 @@ public class LevelLoader : MonoBehaviour
         
     }
 
-    private IEnumerator LoadStartScene()
+    public IEnumerator LoadStartScene()
     {
         yield return new WaitForSeconds(splashDuration);
         SceneManager.LoadScene("StartScene");
     }
 
-    private void LoadNextScene()
+    public void LoadNextScene()
     {
         SceneManager.LoadScene(currentSceneIndex + 1);
+    }
+
+    public void LoadLoseScene()
+    {
+        SceneManager.LoadScene("StartScene");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
