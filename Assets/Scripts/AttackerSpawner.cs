@@ -8,14 +8,16 @@ public class AttackerSpawner : MonoBehaviour
     bool spawn = true;
     [SerializeField] float randomMinSpawnTime = 1;
     [SerializeField] float randomMaxSpawnTime = 5;
-    [SerializeField] Attacker attackerPrefab;
+    [SerializeField] Attacker[] attackerPrefabs;
 
     // Start is called before the first frame update
     IEnumerator Start()
     {
         while (spawn)
         {
-            yield return new WaitForSeconds(UnityEngine.Random.Range(randomMinSpawnTime, randomMaxSpawnTime));
+            yield return new WaitForSeconds(
+                UnityEngine.Random.Range(randomMinSpawnTime, randomMaxSpawnTime)
+                );
             SpawnAttacker();
         }
     }
@@ -28,8 +30,13 @@ public class AttackerSpawner : MonoBehaviour
 
     private void SpawnAttacker()
     {
-        Attacker newAttacker = Instantiate(attackerPrefab, transform.position, transform.rotation);
-        newAttacker.transform.parent = transform;
+        int index = UnityEngine.Random.Range(0, attackerPrefabs.Length);
+        Spawn(attackerPrefabs[index]);
     }
 
+    private void Spawn(Attacker attackerToSpawn)
+    {
+        Attacker newAttacker = Instantiate(attackerToSpawn, transform.position, transform.rotation);
+        newAttacker.transform.parent = transform;
+    }
 }
