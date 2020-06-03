@@ -5,15 +5,20 @@ using UnityEngine;
 
 public class AttackerSpawner : MonoBehaviour
 {
-    bool spawn = true;
+    bool isSpawning = true;
     [SerializeField] float randomMinSpawnTime = 1;
     [SerializeField] float randomMaxSpawnTime = 5;
     [SerializeField] Attacker[] attackerPrefabs;
 
+    public bool IsSpawning()
+    {
+        return this.isSpawning;
+    }
+
     // Start is called before the first frame update
     IEnumerator Start()
     {
-        while (spawn)
+        while (isSpawning)
         {
             yield return new WaitForSeconds(
                 UnityEngine.Random.Range(randomMinSpawnTime, randomMaxSpawnTime)
@@ -38,5 +43,10 @@ public class AttackerSpawner : MonoBehaviour
     {
         Attacker newAttacker = Instantiate(attackerToSpawn, transform.position, transform.rotation);
         newAttacker.transform.parent = transform;
+    }
+
+    public void StopSpawning()
+    {
+        this.isSpawning = false;
     }
 }

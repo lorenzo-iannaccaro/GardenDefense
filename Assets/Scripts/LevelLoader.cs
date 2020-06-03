@@ -40,6 +40,11 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene("StartScene");
     }
 
+    public void LoadWinScene()
+    {
+        SceneManager.LoadScene("StartScene");
+    }
+
     public void QuitGame()
     {
         Application.Quit();

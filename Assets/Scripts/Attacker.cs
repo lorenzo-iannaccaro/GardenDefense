@@ -10,6 +10,11 @@ public class Attacker : MonoBehaviour
     [SerializeField][Range(0f, 5f)] float currentSpeed = 0f;
     Defender currentTarget;
 
+    private void Awake()
+    {
+        FindObjectOfType<LevelController>().AttackerSpawned();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +26,11 @@ public class Attacker : MonoBehaviour
     {
         Move();
         UpdateAnimation();
+    }
+
+    private void OnDestroy()
+    {
+        FindObjectOfType<LevelController>().AttackerDestroyed();
     }
 
     private void UpdateAnimation()

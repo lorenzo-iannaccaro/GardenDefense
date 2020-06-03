@@ -6,6 +6,12 @@ using UnityEngine.UI;
 public class GameTimer : MonoBehaviour
 {
     [SerializeField] float levelTime = 10f;
+    bool isTimeUp = false;
+
+    public bool IsTimeUp()
+    {
+        return isTimeUp;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -16,11 +22,15 @@ public class GameTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Slider>().value = Time.timeSinceLevelLoad / levelTime;
-        if(Time.timeSinceLevelLoad >= levelTime)
+        if (!isTimeUp)
         {
-            // you win the level
-            Debug.Log("Level time finished");
+            GetComponent<Slider>().value = Time.timeSinceLevelLoad / levelTime;
+            if (Time.timeSinceLevelLoad >= levelTime)
+            {
+                // time's up
+                Debug.Log("Level time finished");
+                isTimeUp = true;
+            }
         }
     }
 }
