@@ -5,16 +5,25 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
+    private const string PROJECTILES_PARENT_NAME = "Projectiles";
+
     [SerializeField] GameObject projectilePrefab;
     [SerializeField] GameObject gunPrefab;
     private AttackerSpawner alignedAttackerSpawner;
     private Animator animator;
+
+    private static GameObject projectilesParent;
 
     // Start is called before the first frame update
     void Start()
     {
         SetAttackerSpawner();
         animator = GetComponent<Animator>();
+        if (!projectilesParent)
+        {
+            projectilesParent = new GameObject(PROJECTILES_PARENT_NAME);
+        }
+        
     }
 
     // Update is called once per frame
@@ -34,9 +43,11 @@ public class Shooter : MonoBehaviour
 
     public void Fire()
     {
-        Instantiate(projectilePrefab, 
+        var projectileObj = Instantiate(projectilePrefab, 
                     gunPrefab.transform.position, 
                     gunPrefab.transform.rotation);
+
+        projectileObj.transform.parent = projectilesParent.transform;
     }
 
     private void SetAttackerSpawner()

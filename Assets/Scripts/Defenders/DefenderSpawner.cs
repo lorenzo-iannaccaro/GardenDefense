@@ -43,7 +43,8 @@ public class DefenderSpawner : MonoBehaviour
 
     private void SpawnDefender(Vector2 coordinates)
     {
-        Defender defenderObj = Instantiate(defenderPrefab, coordinates, transform.rotation); 
+        Defender defenderObj = Instantiate(defenderPrefab, coordinates, transform.rotation);
+        defenderObj.transform.parent = this.transform;
     }
 
     private Vector2 GetGridPosition(Vector2 worldPos)

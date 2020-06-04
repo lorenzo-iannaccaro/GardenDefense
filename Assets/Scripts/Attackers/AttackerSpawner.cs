@@ -42,7 +42,7 @@ public class AttackerSpawner : MonoBehaviour
     private void Spawn(Attacker attackerToSpawn)
     {
         Attacker newAttacker = Instantiate(attackerToSpawn, transform.position, transform.rotation);
-        newAttacker.transform.parent = transform;
+        newAttacker.transform.parent = this.transform;
     }
 
     public void StopSpawning()
