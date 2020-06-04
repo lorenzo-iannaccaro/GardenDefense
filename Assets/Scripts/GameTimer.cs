@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GameTimer : MonoBehaviour
 {
-    [SerializeField] float levelTime = 10f;
+    [SerializeField] float levelTime = 30f;
     bool isTimeUp = false;
 
     public bool IsTimeUp()
